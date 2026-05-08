@@ -346,16 +346,16 @@
       <div class="btn-group">
         <button class="btn-primary" id="btn-new-tab"
           onclick="window.open('https://playwright.dev', '_blank')">
-          🔗 New Tab
+          🔗 Open New Tab (playwright.dev)
         </button>
         <button class="btn-info" id="btn-popup"
           onclick="var win = window.open('', 'popup', 'width=450,height=350,top=200,left=200');
                    win.document.write('<div style=font-family:sans-serif;padding:32px;background:#0f172a;color:#f8fafc;height:100%><h2>🚀 Popup Activated</h2><p style=color:#94a3b8>Playwright successfully tracked this new target.</p></div>')">
-          🪟 New Window
+          🪟 Open Popup Window
         </button>
         <button class="btn-success" id="btn-internal-modal"
           onclick="document.getElementById('modal-overlay').classList.add('active')">
-          💬 In-page Modal
+          💬 Open In-page Modal
         </button>
       </div>
 
@@ -370,14 +370,14 @@
       </h2>
       
       <div class="btn-group">
-        <button class="btn-warning" id="btn-alert" onclick="alert('⚠️ This is a browser alert!')">🔔 Alert</button>
+        <button class="btn-warning" id="btn-alert" onclick="alert('⚠️ This is a browser alert!')">🔔 Trigger Alert</button>
         <button class="btn-info" id="btn-confirm" 
                 onclick="var r = confirm('Continue?'); document.getElementById('confirm-result').innerHTML = r ? '<span class=success-text>✓ Confirmed</span>' : '<span class=error-text>✗ Cancelled</span>'">
-                ❓ Confirm
+                ❓ Trigger Confirm
         </button>
         <button class="btn-primary" id="btn-prompt" 
                 onclick="var r = prompt('Name:', 'Tester'); document.getElementById('prompt-result').innerHTML = r !== null ? '👤 Name: <b>' + r + '</b>' : '<span class=error-text>Dismissed</span>'">
-                ✏️ Prompt
+                ✏️ Trigger Prompt
         </button>
       </div>
 
@@ -394,8 +394,8 @@
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Trigger UI states to validate screenshot and video artifacts.</p>
 
       <div class="btn-group">
-        <button class="btn-danger" id="btn-trigger-failure" onclick="document.getElementById('failure-msg').innerHTML='<span class=error-text>💥 CRITICAL FAILURE EMULATED</span>'">💥 Break UI</button>
-        <button class="btn-success" id="btn-reset-state" onclick="document.getElementById('failure-msg').textContent='System Normal'">🔄 Reset</button>
+        <button class="btn-danger" id="btn-trigger-failure" onclick="document.getElementById('failure-msg').innerHTML='<span class=error-text>💥 CRITICAL FAILURE EMULATED</span>'">💥 Simulate Failure State</button>
+        <button class="btn-success" id="btn-reset-state" onclick="document.getElementById('failure-msg').textContent='System Normal'">🔄 Reset State</button>
       </div>
 
       <div id="failure-msg" class="result-box">System Normal</div>
@@ -421,7 +421,7 @@
             ? '<span class=success-text>✓ Submitted: ' + n + '</span>'
             : '<span class=error-text>⚠️ Both fields are required</span>';
         ">
-        🚀 Submit Form
+        📤 Submit Form
       </button>
 
       <div id="trace-result" class="result-box">Waiting for form submission...</div>
