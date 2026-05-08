@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -14,8 +15,20 @@
       color: #1e293b;
       border-left: 4px solid #8b5cf6;
     }
-    b { color: #8b5cf6; font-size: 1.1rem; display: block; margin-bottom: 12px; }
-    .btn-group { display: flex; gap: 8px; margin-bottom: 12px; }
+
+    b {
+      color: #8b5cf6;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
     button {
       padding: 8px 16px;
       border: none;
@@ -27,13 +40,18 @@
       font-size: 0.85rem;
       transition: background 0.2s;
     }
-    button:hover { background: #7c3aed; }
+
+    button:hover {
+      background: #7c3aed;
+    }
+
     #res-A {
       font-size: 0.85rem;
       font-weight: 600;
       color: #10b981;
       min-height: 20px;
     }
+
     iframe {
       display: none;
       width: 100%;
@@ -45,13 +63,15 @@
     }
   </style>
 </head>
+
 <body>
   <b>🅰 Iframe Alpha</b>
   <div class="btn-group">
-    <button id="btn-A" onclick="document.getElementById('res-A').textContent='✨ Alpha Clicked!'">Action A</button>
+    <button id="btn-A" onclick="document.getElementById('res-A').textContent='✨ Alpha Clicked!'">Action</button>
     <button id="btn-open-B" onclick="document.getElementById('iframe-B').style.display='block'">Load Beta</button>
   </div>
   <div id="res-A"></div>
   <iframe id="iframe-B" src="iframe_b.html"></iframe>
 </body>
+
 </html>
