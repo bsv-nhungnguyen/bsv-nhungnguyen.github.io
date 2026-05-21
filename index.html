@@ -187,7 +187,7 @@
       margin-bottom: 16px;
     }
 
-    input[type="text"], input[type="email"] {
+    input[type="text"], input[type="email"], input[type="password"] {
       padding: 12px 16px;
       border-radius: 12px;
       border: 1px solid var(--glass-border);
@@ -260,6 +260,73 @@
     .modal-content h3 { font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin-bottom: 12px; }
     .modal-content p { color: var(--text-muted); margin-bottom: 24px; }
 
+    /* ── Visual Regression sub-cards ── */
+    .vr-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
+    .vr-card { background: rgba(15,23,42,0.55); border: 1px solid var(--glass-border); border-radius: 14px; padding: 16px 18px; }
+    .vr-badge { display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 2px 10px; border-radius: 100px; border: 1px solid; margin-bottom: 10px; }
+    .vrb-full  { background: rgba(239,68,68,0.12); color: #f87171; border-color: rgba(239,68,68,0.25); }
+    .vrb-elem  { background: rgba(14,165,233,0.12); color: #38bdf8; border-color: rgba(14,165,233,0.25); }
+    .vrb-video { background: rgba(139,92,246,0.12); color: #c084fc; border-color: rgba(139,92,246,0.25); }
+    .vr-card p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.5; }
+    .vr-display { padding: 11px; border-radius: 9px; font-size: 0.83rem; text-align: center; min-height: 46px; display: flex; align-items: center; justify-content: center; font-weight: 600; transition: all 0.3s; border: 1px solid var(--glass-border); color: var(--text-muted); background: rgba(255,255,255,0.02); }
+    .vr-display.vr-normal  { background: rgba(16,185,129,0.07); color: #34d399; border-color: rgba(16,185,129,0.2); }
+    .vr-display.vr-failure { background: rgba(239,68,68,0.07);  color: #f87171; border-color: rgba(239,68,68,0.25); }
+    #screenshot-element { border: 2px dashed var(--glass-border); border-radius: 10px; padding: 14px; text-align: center; transition: all 0.35s; min-height: 68px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 5px; }
+    #screenshot-element.se-hl { border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(14,165,233,0.18); background: rgba(14,165,233,0.05); }
+    #screenshot-element.se-ch { border-color: var(--accent);    box-shadow: 0 0 0 3px rgba(16,185,129,0.18); background: rgba(16,185,129,0.05); }
+    .se-locator { font-family: monospace; font-size: 0.7rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 2px 7px; border-radius: 4px; }
+    .vr-steps { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+    .vr-step { padding: 4px 11px; border-radius: 100px; font-size: 0.72rem; font-weight: 600; border: 1px solid var(--glass-border); color: var(--text-muted); background: transparent; transition: all 0.3s; }
+    .vr-step.vs-active { background: rgba(139,92,246,0.18); color: #c084fc; border-color: rgba(139,92,246,0.4); }
+    .vr-step.vs-done   { background: rgba(16,185,129,0.12); color: #34d399;  border-color: rgba(16,185,129,0.3); }
+    .vr-prog { height: 4px; background: rgba(255,255,255,0.07); border-radius: 2px; margin: 10px 0; overflow: hidden; }
+    .vr-prog-bar { height: 100%; width: 0%; background: linear-gradient(90deg,#8b5cf6,#6366f1); border-radius: 2px; transition: width 0.5s; }
+    .vr-action-txt { font-size: 0.78rem; color: var(--text-muted); min-height: 18px; margin-bottom: 10px; font-style: italic; }
+
+    /* ── Hooks Demo ── */
+    .hooks-flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .hf-step { font-size: 0.72rem; font-weight: 700; padding: 3px 11px; border-radius: 100px; }
+    .hf-ba { background: rgba(139,92,246,0.12); color: #c084fc; border: 1px solid rgba(139,92,246,0.3); }
+    .hf-be { background: rgba(14,165,233,0.12);  color: #38bdf8; border: 1px solid rgba(14,165,233,0.3); }
+    .hf-ae { background: rgba(239,68,68,0.12);   color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+    .hf-aa { background: rgba(16,185,129,0.12);  color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+    .hf-arrow { color: var(--text-muted); font-size: 0.85rem; }
+    .hk-chip { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 9px; border-radius: 100px; border: 1px solid; margin-bottom: 10px; }
+    .hc-ba { background: rgba(139,92,246,0.12); color: #c084fc; border-color: rgba(139,92,246,0.3); }
+    .hc-be { background: rgba(14,165,233,0.12);  color: #38bdf8; border-color: rgba(14,165,233,0.3); }
+    .hc-ae { background: rgba(239,68,68,0.12);   color: #f87171; border-color: rgba(239,68,68,0.3); }
+    .hc-aa { background: rgba(16,185,129,0.12);  color: #34d399; border-color: rgba(16,185,129,0.3); }
+    .hk-sub { background: rgba(15,23,42,0.55); border: 1px solid var(--glass-border); border-radius: 14px; padding: 18px; }
+    .hk-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+    @media(max-width:640px){ .hk-2col { grid-template-columns: 1fr; } }
+    .hk-status-bar { display: flex; align-items: center; justify-content: space-between; padding: 9px 14px; background: rgba(16,185,129,0.09); border: 1px solid rgba(16,185,129,0.22); border-radius: 10px; margin-bottom: 14px; font-size: 0.85rem; }
+    .hk-user { color: #34d399; font-weight: 600; }
+    .hk-user em { color: var(--text-muted); font-style: normal; font-weight: 400; margin-right: 5px; }
+    .hk-msg { padding: 7px 12px; border-radius: 8px; font-size: 0.82rem; font-weight: 500; margin-top: 9px; min-height: 32px; display: flex; align-items: center; gap: 6px; }
+    .hk-ok   { background: rgba(16,185,129,0.1);  color: #34d399; border: 1px solid rgba(16,185,129,0.2); }
+    .hk-err  { background: rgba(239,68,68,0.1);   color: #f87171; border: 1px solid rgba(239,68,68,0.2); }
+    .hk-info { background: rgba(14,165,233,0.1);  color: #38bdf8; border: 1px solid rgba(14,165,233,0.2); }
+    .hk-dim  { color: var(--text-muted); font-style: italic; border: 1px dashed var(--glass-border); background: transparent; }
+    .hk-label { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 5px; }
+    .rec-tbl { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    .rec-tbl th { text-align: left; padding: 7px 10px; color: var(--text-muted); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--glass-border); }
+    .rec-tbl td { padding: 8px 10px; vertical-align: middle; border-bottom: 1px solid rgba(255,255,255,0.03); }
+    .rec-id   { color: var(--text-muted); font-family: monospace; font-size: 0.75rem; }
+    .rec-name { color: #fff; font-weight: 500; }
+    .cat-pill { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 0.7rem; font-weight: 600; }
+    .cp-bug  { background: rgba(239,68,68,0.12); color: #f87171; }
+    .cp-feat { background: rgba(139,92,246,0.12); color: #c084fc; }
+    .cp-task { background: rgba(14,165,233,0.12); color: #38bdf8; }
+    .cp-chore{ background: rgba(245,158,11,0.12); color: #fbbf24; }
+    .rec-badge { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; background: rgba(139,92,246,0.2); color: #c084fc; font-size: 0.7rem; font-weight: 700; margin-left: 5px; }
+    select { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1px solid var(--glass-border); background: rgba(15,23,42,0.6); color: #fff; font-size: 0.95rem; font-family: 'Inter',sans-serif; outline: none; transition: border-color 0.2s; cursor: pointer; }
+    select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(139,92,246,0.2); }
+    select option { background: #1e293b; }
+    .btn-sm-ghost { cursor: pointer; padding: 7px 13px; border: 1px solid var(--glass-border); border-radius: 8px; font-size: 0.8rem; font-weight: 600; background: transparent; color: var(--text-muted); transition: all 0.2s; display: inline-flex; align-items: center; gap: 5px; font-family: 'Inter',sans-serif; }
+    .btn-sm-ghost:hover { border-color: rgba(239,68,68,0.4); color: #f87171; }
+    @keyframes recIn { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:translateY(0)} }
+    .rec-new { animation: recIn 0.22s ease-out; }
+
     /* Animations */
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes fadeInDown {
@@ -284,13 +351,17 @@
   <header>
     <h1>Playwright test 08.05.2026</h1>
     <p>A playground for testing modern web automation strategies with Playwright. Explore complex DOM interactions, frames, and synchronization challenges.</p>
+    <a href="https://docs.google.com/spreadsheets/d/1vUvOZ6K8BoI9Cz29g1BcpassOLTCXINQ/edit?gid=194545409#gid=194545409"
+       target="_blank"
+       style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:100px;color:#94a3b8;font-size:0.85rem;font-weight:500;text-decoration:none;transition:all 0.2s;">
+      Test Cases
+    </a>
   </header>
 
   <div class="grid">
     <!-- SECTION 1 – IFRAME -->
     <div class="section" id="section-iframe">
       <h2>
-        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
         Frames & Iframes <span class="tag">iframe</span>
       </h2>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Test your locators against inline and multi-level nested frames.</p>
@@ -311,10 +382,10 @@
           </style>
         </head>
         <body>
-          <h3>📋 Simple Frame Form</h3>
+          <h3>Simple Frame Form</h3>
           <div class='form-row'>
             <input type='text' id='iframe-name' placeholder='Enter your name' />
-            <button id='iframe-submit-btn' onclick=&quot;document.getElementById(&apos;frame-output&apos;).textContent = &apos;✨ Success: Hello, &apos; + document.getElementById(&apos;iframe-name&apos;).value + &apos;!&apos;&quot;>Submit</button>
+            <button id='iframe-submit-btn' onclick=&quot;document.getElementById(&apos;frame-output&apos;).textContent = &apos;Success: Hello &apos; + document.getElementById(&apos;iframe-name&apos;).value + &apos;!&apos;&quot;>Submit</button>
           </div>
           <div id='frame-output'></div>
         </body>
@@ -324,7 +395,7 @@
       <div class="btn-group">
         <button class="btn-info" id="btn-open-nested"
           onclick="document.getElementById('iframe-A').style.display='block'; this.style.display='none'">
-          🔲 Load Nested Frames (A → B → C)
+          Load Nested Frames (A → B → C)
         </button>
       </div>
 
@@ -338,7 +409,6 @@
     <!-- SECTION 2 – WINDOWS / TABS / POPUPS -->
     <div class="section" id="section-windows">
       <h2>
-        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
         Windows & Popups <span class="tag">multi-page</span>
       </h2>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Automate cross-page interactions and dynamic window management.</p>
@@ -346,16 +416,16 @@
       <div class="btn-group">
         <button class="btn-primary" id="btn-new-tab"
           onclick="window.open('https://playwright.dev', '_blank')">
-          🔗 Open New Tab (playwright.dev)
+          Open New Tab (playwright.dev)
         </button>
         <button class="btn-info" id="btn-popup"
           onclick="var win = window.open('', 'popup', 'width=450,height=350,top=200,left=200');
-                   win.document.write('<div style=font-family:sans-serif;padding:32px;background:#0f172a;color:#f8fafc;height:100%><h2>🚀 Popup Activated</h2><p style=color:#94a3b8>Playwright successfully tracked this new target.</p></div>')">
-          🪟 Open Popup Window
+                   win.document.write('<div style=font-family:sans-serif;padding:32px;background:#0f172a;color:#f8fafc;height:100%><h2>Popup Activated</h2><p style=color:#94a3b8>Playwright successfully tracked this new target.</p></div>')">
+          Open Popup Window
         </button>
         <button class="btn-success" id="btn-internal-modal"
           onclick="document.getElementById('modal-overlay').classList.add('active')">
-          💬 Open In-page Modal
+          Open In-page Modal
         </button>
       </div>
 
@@ -365,19 +435,18 @@
     <!-- SECTION 3 – DIALOGS -->
     <div class="section" id="section-dialogs">
       <h2>
-        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
         Native Dialogs <span class="tag">dialog</span>
       </h2>
       
       <div class="btn-group">
-        <button class="btn-warning" id="btn-alert" onclick="alert('⚠️ This is a browser alert!')">🔔 Trigger Alert</button>
+        <button class="btn-warning" id="btn-alert" onclick="alert('This is a browser alert!')">Trigger Alert</button>
         <button class="btn-info" id="btn-confirm" 
                 onclick="var r = confirm('Continue?'); document.getElementById('confirm-result').innerHTML = r ? '<span class=success-text>✓ Confirmed</span>' : '<span class=error-text>✗ Cancelled</span>'">
-                ❓ Trigger Confirm
+                Trigger Confirm
         </button>
         <button class="btn-primary" id="btn-prompt" 
-                onclick="var r = prompt('Name:', 'Tester'); document.getElementById('prompt-result').innerHTML = r !== null ? '👤 Name: <b>' + r + '</b>' : '<span class=error-text>Dismissed</span>'">
-                ✏️ Trigger Prompt
+                onclick="var r = prompt('Name:', 'Tester'); document.getElementById('prompt-result').innerHTML = r !== null ? 'Name: <b>' + r + '</b>' : '<span class=error-text>Dismissed</span>'">
+                Trigger Prompt
         </button>
       </div>
 
@@ -385,29 +454,167 @@
       <div id="prompt-result" class="result-box" style="margin-top:8px">Prompt state...</div>
     </div>
 
-    <!-- SECTION 4 – FAILURE STATES -->
+    <!-- SECTION 4 – VISUAL REGRESSIONS -->
     <div class="section" id="section-screenshot">
       <h2>
-        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
         Visual Regressions <span class="tag">capture</span>
       </h2>
-      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">Trigger UI states to validate screenshot and video artifacts.</p>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 4px;">3 scenarios: chụp toàn trang, chụp một element, và quay video.</p>
 
-      <div class="btn-group">
-        <button class="btn-danger" id="btn-trigger-failure" onclick="document.getElementById('failure-msg').innerHTML='<span class=error-text>💥 CRITICAL FAILURE EMULATED</span>'">💥 Simulate Failure State</button>
-        <button class="btn-success" id="btn-reset-state" onclick="document.getElementById('failure-msg').textContent='System Normal'">🔄 Reset State</button>
+      <div class="vr-grid">
+
+        <!-- Case 1: Full Page Screenshot -->
+        <div class="vr-card">
+          <div class="vr-badge vrb-full">Full Page Screenshot</div>
+          <p>Chụp toàn bộ viewport.<br>Dùng <code style="background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:4px;font-size:0.75rem;">page.screenshot()</code></p>
+          <div id="vr-full-display" class="vr-display vr-normal">✓ System Normal</div>
+          <div class="btn-group" style="margin-top: 12px;">
+            <button class="btn-danger" id="btn-trigger-failure" onclick="setVrFull('failure')">Failure State</button>
+            <button class="btn-success" id="btn-reset-state" onclick="setVrFull('normal')">✓ Normal State</button>
+          </div>
+        </div>
+
+        <!-- Case 2: Element Screenshot -->
+        <div class="vr-card">
+          <div class="vr-badge vrb-elem">Element Screenshot</div>
+          <p>Chụp một phần tử cụ thể.<br>Dùng <code style="background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:4px;font-size:0.75rem;">locator.screenshot()</code></p>
+          <div id="screenshot-element">
+            <div id="se-status" style="font-size:0.84rem;font-weight:600;color:var(--text-muted);">Element ready</div>
+            <div class="se-locator">#screenshot-element</div>
+          </div>
+          <div class="btn-group" style="margin-top: 12px;">
+            <button class="btn-info" onclick="seHighlight()">Highlight</button>
+            <button class="btn-success" onclick="seChange()">Change State</button>
+            <button class="btn-sm-ghost" onclick="seReset()">Reset</button>
+          </div>
+        </div>
+
+        <!-- Case 3: Video Recording -->
+        <div class="vr-card">
+          <div class="vr-badge vrb-video">Video Recording</div>
+          <p>Chuỗi thao tác để quay video.<br>Dùng <code style="background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:4px;font-size:0.75rem;">video: { dir: '...' }</code></p>
+          <div class="vr-steps" id="vr-steps">
+            <span class="vr-step" id="vs-1">1. Navigate</span>
+            <span class="vr-step" id="vs-2">2. Login</span>
+            <span class="vr-step" id="vs-3">3. Fill Form</span>
+            <span class="vr-step" id="vs-4">4. Submit</span>
+          </div>
+          <div class="vr-prog"><div class="vr-prog-bar" id="vr-prog-bar"></div></div>
+          <div class="vr-action-txt" id="vr-action-txt">Press play to start</div>
+          <button class="btn-primary" id="btn-play-seq" style="width:100%" onclick="playVrSequence()">▶ Play Sequence</button>
+        </div>
+
       </div>
-
-      <div id="failure-msg" class="result-box">System Normal</div>
     </div>
 
-    <!-- SECTION 5 – TRACING -->
+    <!-- SECTION 5 – HOOKS DEMO -->
+    <div class="section" id="section-hooks" style="grid-column: span 2;">
+      <h2>
+        Hooks Demo <span class="tag">hooks</span>
+      </h2>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+        Demo <strong style="color:#c084fc;">beforeAll</strong> · <strong style="color:#38bdf8;">beforeEach</strong> · <strong style="color:#f87171;">afterEach</strong> · <strong style="color:#34d399;">afterAll</strong>
+        — Login một lần · Tạo record trước mỗi test · Xóa record sau mỗi test · Logout.
+      </p>
+
+      <!-- Flow indicator -->
+      <div class="hooks-flow">
+        <span class="hf-step hf-ba">beforeAll</span>
+        <span class="hf-arrow">→</span>
+        <span class="hf-step hf-be">beforeEach</span>
+        <span class="hf-arrow">→</span>
+        <span class="hf-step hf-ae">afterEach</span>
+        <span class="hf-arrow">→</span>
+        <span class="hf-step hf-aa">afterAll</span>
+      </div>
+
+      <!-- LOGIN (beforeAll) -->
+      <div id="hk-login-section">
+        <div class="hk-sub">
+          <div class="hk-chip hc-ba">beforeAll — Login once</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+            <div>
+              <label class="hk-label" for="hk-username">Username</label>
+              <input type="text" id="hk-username" placeholder="admin" autocomplete="off" />
+            </div>
+            <div>
+              <label class="hk-label" for="hk-password">Password</label>
+              <input type="password" id="hk-password" placeholder="password123" />
+            </div>
+          </div>
+          <button class="btn-primary" id="hk-btn-login" style="width:100%" onclick="hkLogin()">Login</button>
+          <div id="hk-login-msg" class="hk-msg hk-dim">Dùng: admin / password123</div>
+        </div>
+      </div>
+
+      <!-- MAIN (after login) -->
+      <div id="hk-main-section" style="display:none;">
+
+        <!-- Status bar -->
+        <div class="hk-status-bar">
+          <div class="hk-user"><em>Logged in as</em><strong id="hk-logged-user">—</strong></div>
+          <button class="btn-sm-ghost" id="hk-btn-logout" onclick="hkLogout()">Logout (afterAll)</button>
+        </div>
+
+        <!-- 2-col: Create + Records table -->
+        <div class="hk-2col">
+
+          <!-- Create Record (beforeEach) -->
+          <div class="hk-sub">
+            <div class="hk-chip hc-be">beforeEach — Create record</div>
+            <div style="margin-bottom:10px;">
+              <label class="hk-label" for="hk-record-name">Record Name</label>
+              <input type="text" id="hk-record-name" placeholder="e.g. Fix login bug" autocomplete="off" />
+            </div>
+            <div style="margin-bottom:12px;">
+              <label class="hk-label" for="hk-record-category">Category</label>
+              <select id="hk-record-category">
+                <option value="bug">Bug</option>
+                <option value="feature">Feature</option>
+                <option value="task">Task</option>
+                <option value="chore">Chore</option>
+              </select>
+            </div>
+            <button class="btn-success" id="hk-btn-create" style="width:100%" onclick="hkCreate()">Create Record</button>
+            <div id="hk-create-msg" class="hk-msg hk-dim">Điền tên và chọn category.</div>
+          </div>
+
+          <!-- Records Table (afterEach) -->
+          <div class="hk-sub">
+            <div class="hk-chip hc-ae">afterEach — Delete record</div>
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px;">
+              <span style="font-size:0.85rem;font-weight:600;color:#fff;">Records</span>
+              <span class="rec-badge" id="hk-rec-count">0</span>
+            </div>
+            <table class="rec-tbl">
+              <thead>
+                <tr><th>ID</th><th>Name</th><th>Category</th><th>Action</th></tr>
+              </thead>
+              <tbody id="hk-record-list">
+                <tr id="hk-empty-row"><td colspan="4" style="text-align:center;padding:18px 0;color:var(--text-muted);font-size:0.8rem;font-style:italic;">No records yet.</td></tr>
+              </tbody>
+            </table>
+            <div id="hk-delete-msg" class="hk-msg hk-dim">Click Delete để xóa (afterEach).</div>
+          </div>
+
+        </div><!-- /.hk-2col -->
+
+        <!-- afterAll hint -->
+        <div style="margin-top:14px;padding:12px 16px;background:rgba(16,185,129,0.06);border:1px dashed rgba(16,185,129,0.2);border-radius:10px;font-size:0.82rem;color:var(--text-muted);">
+          <span class="hk-chip hc-aa" style="margin-bottom:0;margin-right:8px;vertical-align:middle;">afterAll</span>
+          Nhấn <strong style="color:#f87171;">Logout</strong> để kết thúc session — tương đương <code style="background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:4px;">afterAll</code> dọn dẹp sau khi tất cả tests hoàn tất.
+          <div id="hk-logout-msg" class="hk-msg hk-dim" style="margin-top:8px;">Chưa đăng xuất.</div>
+        </div>
+
+      </div><!-- /#hk-main-section -->
+    </div>
+
+    <!-- SECTION 6 – TRACING -->
     <div class="section" id="section-tracing" style="grid-column: span 1;">
       <h2>
-        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
         Tracing & Submission <span class="tag">trace</span>
       </h2>
-      
+
       <div class="input-group">
         <input type="text"  id="trace-name"  placeholder="Developer Name" />
         <input type="email" id="trace-email" placeholder="dev@example.com" />
@@ -419,9 +626,9 @@
           var e = document.getElementById('trace-email').value;
           document.getElementById('trace-result').innerHTML = (n && e)
             ? '<span class=success-text>✓ Submitted: ' + n + '</span>'
-            : '<span class=error-text>⚠️ Both fields are required</span>';
+            : '<span class=error-text>Both fields are required</span>';
         ">
-        📤 Submit Form
+        Submit Form
       </button>
 
       <div id="trace-result" class="result-box">Waiting for form submission...</div>
@@ -429,14 +636,14 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Playwright Automation Arena. Built with ❤️ for the Testing Community.</p>
+    <p>&copy; 2026 Playwright Automation Arena. Built for the Testing Community.</p>
   </footer>
 </div>
 
 <!-- In-page modal overlay -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal-content">
-    <h3>✨ Secure Confirmation</h3>
+    <h3>Secure Confirmation</h3>
     <p>Please enter your verification code to proceed with the action.</p>
     <input type="text" id="modal-input" placeholder="Enter code (e.g. 1234)" style="width: 100%; margin-bottom: 20px;" />
     <div class="btn-group" style="justify-content: center;">
@@ -455,12 +662,143 @@
 </div>
 
 <script>
-  // Add some micro-interactions or smooth transitions if needed
-  document.querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      // Optional ripple effect or other UI feedback
-    });
-  });
+  // ── Visual Regressions ──
+  function setVrFull(state) {
+    var el = document.getElementById('vr-full-display');
+    if (state === 'failure') {
+      el.className = 'vr-display vr-failure';
+      el.innerHTML = 'CRITICAL FAILURE EMULATED';
+    } else {
+      el.className = 'vr-display vr-normal';
+      el.innerHTML = '✓ System Normal';
+    }
+  }
+
+  function seHighlight() {
+    document.getElementById('screenshot-element').className = 'se-hl';
+    var s = document.getElementById('se-status');
+    s.style.color = '#38bdf8'; s.textContent = 'Element highlighted';
+  }
+  function seChange() {
+    document.getElementById('screenshot-element').className = 'se-ch';
+    var s = document.getElementById('se-status');
+    s.style.color = '#34d399'; s.textContent = 'State changed ✓';
+  }
+  function seReset() {
+    document.getElementById('screenshot-element').className = '';
+    var s = document.getElementById('se-status');
+    s.style.color = 'var(--text-muted)'; s.textContent = 'Element ready';
+  }
+
+  var vrSeqRunning = false;
+  var vrSteps = [
+    { id: 'vs-1', action: 'Navigating to target URL...' },
+    { id: 'vs-2', action: 'Filling login credentials...' },
+    { id: 'vs-3', action: 'Filling out the form fields...' },
+    { id: 'vs-4', action: 'Submitting and verifying result...' }
+  ];
+  function playVrSequence() {
+    if (vrSeqRunning) return;
+    vrSeqRunning = true;
+    var btn = document.getElementById('btn-play-seq');
+    btn.disabled = true; btn.textContent = '⏳ Running...';
+    vrSteps.forEach(function(s) { document.getElementById(s.id).className = 'vr-step'; });
+    document.getElementById('vr-prog-bar').style.width = '0%';
+    document.getElementById('vr-action-txt').textContent = '';
+    var idx = 0;
+    function next() {
+      if (idx >= vrSteps.length) {
+        document.getElementById('vr-action-txt').textContent = '✓ Sequence complete!';
+        document.getElementById('vr-prog-bar').style.width = '100%';
+        btn.disabled = false; btn.textContent = '▶ Play Sequence';
+        vrSeqRunning = false; return;
+      }
+      var s = vrSteps[idx];
+      document.getElementById(s.id).className = 'vr-step vs-active';
+      document.getElementById('vr-action-txt').textContent = s.action;
+      document.getElementById('vr-prog-bar').style.width = ((idx + 1) / vrSteps.length * 100) + '%';
+      setTimeout(function() {
+        document.getElementById(s.id).className = 'vr-step vs-done';
+        idx++; setTimeout(next, 250);
+      }, 1100);
+    }
+    next();
+  }
+
+  // ── Hooks Demo ──
+  var hkRecId = 1;
+  function hkNow() {
+    return new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  }
+  function hkMsg(id, html, cls) {
+    var el = document.getElementById(id);
+    el.className = 'hk-msg ' + cls; el.innerHTML = html;
+  }
+  function hkEsc(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function hkLogin() {
+    var u = document.getElementById('hk-username').value.trim();
+    var p = document.getElementById('hk-password').value.trim();
+    if (!u || !p) { hkMsg('hk-login-msg', 'Fill in both fields.', 'hk-err'); return; }
+    if (u !== 'admin' || p !== 'password123') { hkMsg('hk-login-msg', 'Invalid. Use admin / password123.', 'hk-err'); return; }
+    document.getElementById('hk-login-section').style.display = 'none';
+    document.getElementById('hk-main-section').style.display = 'block';
+    document.getElementById('hk-logged-user').textContent = u;
+  }
+  function hkLogout() {
+    document.getElementById('hk-main-section').style.display = 'none';
+    document.getElementById('hk-login-section').style.display = 'block';
+    document.getElementById('hk-username').value = '';
+    document.getElementById('hk-password').value = '';
+    hkMsg('hk-login-msg', '✓ Đã đăng xuất (afterAll).', 'hk-ok');
+    hkMsg('hk-logout-msg', '✓ Logged out at ' + hkNow() + ' (afterAll complete).', 'hk-ok');
+  }
+  function hkCatClass(c) {
+    return { bug:'cp-bug', feature:'cp-feat', task:'cp-task', chore:'cp-chore' }[c] || 'cp-task';
+  }
+  function hkCreate() {
+    var name = document.getElementById('hk-record-name').value.trim();
+    var cat  = document.getElementById('hk-record-category').value;
+    if (!name) { hkMsg('hk-create-msg', 'Record name cannot be empty.', 'hk-err'); return; }
+    var id = hkRecId++;
+    var empty = document.getElementById('hk-empty-row');
+    if (empty) empty.remove();
+    var tbody = document.getElementById('hk-record-list');
+    var tr = document.createElement('tr');
+    tr.id = 'hk-row-' + id; tr.className = 'rec-new';
+    tr.setAttribute('data-record-id', id);
+    var catLabel = cat.charAt(0).toUpperCase() + cat.slice(1);
+    tr.innerHTML =
+      '<td class="rec-id">#' + String(id).padStart(3,'0') + '</td>' +
+      '<td class="rec-name">' + hkEsc(name) + '</td>' +
+      '<td><span class="cat-pill ' + hkCatClass(cat) + '">' + catLabel + '</span></td>' +
+      '<td><button class="btn-danger" id="hk-btn-delete-' + id + '" ' +
+          'onclick="hkDelete(' + id + ',\'' + hkEsc(name) + '\')" ' +
+          'style="padding:5px 11px;font-size:0.78rem;">Delete</button></td>';
+    tbody.appendChild(tr);
+    hkUpdateCount();
+    document.getElementById('hk-record-name').value = '';
+    hkMsg('hk-create-msg', '✓ "' + hkEsc(name) + '" created at ' + hkNow() + ' (beforeEach done).', 'hk-ok');
+    hkMsg('hk-delete-msg', 'Record ready — click Delete to clean up (afterEach).', 'hk-info');
+  }
+  function hkDelete(id, name) {
+    var row = document.getElementById('hk-row-' + id);
+    if (row) row.remove();
+    var tbody = document.getElementById('hk-record-list');
+    if (tbody.querySelectorAll('tr[data-record-id]').length === 0) {
+      var tr = document.createElement('tr');
+      tr.id = 'hk-empty-row';
+      tr.innerHTML = '<td colspan="4" style="text-align:center;padding:18px 0;color:var(--text-muted);font-size:0.8rem;font-style:italic;">No records yet.</td>';
+      tbody.appendChild(tr);
+    }
+    hkUpdateCount();
+    hkMsg('hk-delete-msg', '"' + hkEsc(name) + '" deleted at ' + hkNow() + ' (afterEach done).', 'hk-ok');
+  }
+  function hkUpdateCount() {
+    var n = document.getElementById('hk-record-list').querySelectorAll('tr[data-record-id]').length;
+    document.getElementById('hk-rec-count').textContent = n;
+  }
 </script>
 
 </body>
