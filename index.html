@@ -454,8 +454,33 @@
       <div id="prompt-result" class="result-box" style="margin-top:8px">Prompt state...</div>
     </div>
 
-    <!-- SECTION 4 – VISUAL REGRESSIONS -->
-    <div class="section" id="section-screenshot">
+    <!-- SECTION 4 – TRACING -->
+    <div class="section" id="section-tracing">
+      <h2>
+        Tracing & Submission <span class="tag">trace</span>
+      </h2>
+
+      <div class="input-group">
+        <input type="text"  id="trace-name"  placeholder="Developer Name" />
+        <input type="email" id="trace-email" placeholder="dev@example.com" />
+      </div>
+
+      <button class="btn-primary" id="btn-trace-submit" style="width: 100%"
+        onclick="
+          var n = document.getElementById('trace-name').value;
+          var e = document.getElementById('trace-email').value;
+          document.getElementById('trace-result').innerHTML = (n && e)
+            ? '<span class=success-text>✓ Submitted: ' + n + '</span>'
+            : '<span class=error-text>Both fields are required</span>';
+        ">
+        Submit Form
+      </button>
+
+      <div id="trace-result" class="result-box">Waiting for form submission...</div>
+    </div>
+
+    <!-- SECTION 5 – VISUAL REGRESSIONS -->
+    <div class="section" id="section-screenshot" style="grid-column: span 2;">
       <h2>
         Visual Regressions <span class="tag">capture</span>
       </h2>
@@ -609,30 +634,6 @@
       </div><!-- /#hk-main-section -->
     </div>
 
-    <!-- SECTION 6 – TRACING -->
-    <div class="section" id="section-tracing" style="grid-column: span 1;">
-      <h2>
-        Tracing & Submission <span class="tag">trace</span>
-      </h2>
-
-      <div class="input-group">
-        <input type="text"  id="trace-name"  placeholder="Developer Name" />
-        <input type="email" id="trace-email" placeholder="dev@example.com" />
-      </div>
-
-      <button class="btn-primary" id="btn-trace-submit" style="width: 100%"
-        onclick="
-          var n = document.getElementById('trace-name').value;
-          var e = document.getElementById('trace-email').value;
-          document.getElementById('trace-result').innerHTML = (n && e)
-            ? '<span class=success-text>✓ Submitted: ' + n + '</span>'
-            : '<span class=error-text>Both fields are required</span>';
-        ">
-        Submit Form
-      </button>
-
-      <div id="trace-result" class="result-box">Waiting for form submission...</div>
-    </div>
   </div>
 
   <footer>
